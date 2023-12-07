@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 > 회원정보 확인</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../static/css/reset.css">
+    <link rel="stylesheet" href="../../../../static/css/sub/sub_mypage/sub_myinfo_checkpw/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <!-- header -->
+
+        <header th:insert="~{fragment/header.html::header_f}"></header>
+
+        <!-- main 시작 -->
+        <main>
+            <section class="sub-title-wrap">
+                <div class="sub-title-bg">
+                    <div class="sub-title-area">
+                        <h3 class="sub-title">Mypage</h3>
+                        <div class="line"></div>
+                        <p class="sub-title-txt">나의 정보 한눈에 보기
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- section 시작 -->
+
+        <section class="myinfo-content-wrap">
+            <ul class="sub-navigate-nav">
+                <h4>마이페이지</h4>
+                <li>
+                    <a href="#">예약 내역</a>
+                </li>
+                <li>
+                    <a href="/mypage/myinfo/checkpw" class="check-page" style="color: tomato">내 정보 관리</a>
+                </li>
+                <li>
+                    <a href="#">문의하기</a>
+                </li>
+                <li>
+                    <a href="#">문의내역 확인</a>
+                </li>
+                <li>
+                    <a href="#">리뷰관리</a>
+                </li>
+            </ul>
+            <div class="myinfo-content">
+                <h3>회원정보 확인</h3>
+                <form action="" class="checkpw">
+                    <p>xxx님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한번 확인 합니다.</p>
+                    <table>
+                        <tr>
+                            <th>아이디</th>
+                            <td>xxx</td>
+                        </tr>
+                        <tr>
+                            <th>비밀번호</th>
+                            <td>
+                                <input type="password" class="passwd" id="passwd" />
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btn_box">
+                        <button class="btn_check" id="btn_check">확인</button>
+                        <button class="btn_cancel" ondblclick="location.href='/mypage/myinfo/checkpw'">취소</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- section 끝 -->
+
+        <!-- footer 시작-->
+
+        <footer th:insert="~{fragment/footer.html::footer_f}"></footer>
+
+        <!-- Anchor -->
+
+        <a href="#top" class="anchor">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <script>
+        let passwd = document.querySelector("#passwd");
+        let btn_check = document.querySelector("#btn_check");
+
+        btn_check.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if(passwd.value == "") {
+                alert("비밀번호를 입력해 주세요.");
+                passwd.focus();
+                return false;
+            }
+        });
+    </script>
+
+    <script src="../../../../static/js/header_nav.js"></script>
+</body>
+
+</html>
