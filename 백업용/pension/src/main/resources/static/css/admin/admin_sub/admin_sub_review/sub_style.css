@@ -203,7 +203,7 @@ td {
 }
 td:nth-child(2){
     text-align: left;
-    padding-left: 8px;
+    padding: 0 12px;
 }
 .btn2 {
     padding: 5px 12px;
@@ -219,9 +219,22 @@ td:nth-child(2){
     background-color: #c7e0f5;
     color: #2185D0;
 }
-/* .red {
-    background-color: #ff8fa4;
-} */
+.yellow{
+    background-color: #736055;
+    color: #fff;
+    transition: 0.2s;
+}
+.yellow:hover{
+    background-color: #5d544d;
+}
+.red{
+    background-color: #F2561D;
+    color: #fff;
+    transition: 0.2s;
+}
+.red:hover {
+    background-color: #ea1818;
+}
 .bottom {
     display: flex;
     justify-content: space-between;
