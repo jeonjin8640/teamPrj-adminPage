@@ -209,14 +209,16 @@ nav {
 }
 
 .reserve_name_area label,
-.reserve_tell_area label {
+.reserve_tell_area label,
+.reserve_email_area label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
 }
 
 .reserve_name_area input,
-.reserve_tell_area input {
+.reserve_tell_area input,
+.reserve_email_area input {
     padding: 10px 15px;
     margin-bottom: 30px;
     width: 100%;
@@ -230,6 +232,11 @@ nav {
     margin-left: 5px;
     font-size: 14px;
     color:  rgb(92, 132, 241);
+}
+
+.cal_area {
+    margin-bottom: 20px;
+    text-align: right;
 }
 
 .price_area {

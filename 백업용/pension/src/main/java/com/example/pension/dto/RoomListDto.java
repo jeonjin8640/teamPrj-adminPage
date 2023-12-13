@@ -1,18 +1,20 @@
 package com.example.pension.dto;
 
 public class RoomListDto {
-    private int roomId;
+    private int roomNum;
     private String roomName;
     private int roomPrice;
     private int maxPerson;
     private int minPerson;
+    private String checkinTime;
+    private String checkoutTime;
 
-    public int getRoomId() {
-        return roomId;
+    public int getRoomNum() {
+        return roomNum;
     }
 
-    public void setRoomId(int roomId) {
-        this.roomId = roomId;
+    public void setRoomNum(int roomNum) {
+        this.roomNum = roomNum;
     }
 
     public String getRoomName() {
@@ -47,14 +49,19 @@ public class RoomListDto {
         this.minPerson = minPerson;
     }
 
-    @Override
-    public String toString() {
-        return "RoomListDto{" +
-                "roomId=" + roomId +
-                ", roomName='" + roomName + '\'' +
-                ", roomPrice=" + roomPrice +
-                ", maxPerson=" + maxPerson +
-                ", minPerson=" + minPerson +
-                '}';
+    public String getCheckinTime() {
+        return checkinTime;
+    }
+
+    public void setCheckinTime(String checkinTime) {
+        this.checkinTime = checkinTime;
+    }
+
+    public String getCheckoutTime() {
+        return checkoutTime;
+    }
+
+    public void setCheckoutTime(String checkoutTime) {
+        this.checkoutTime = checkoutTime;
     }
 }
